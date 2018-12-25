@@ -11,7 +11,7 @@ git clone https://github.com/adebadayo/git-subcmd.git
 ```
 
 ```
-chmod =x cmd/*
+chmod 777 cmd/*
 ```
 
 ```
