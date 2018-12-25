@@ -6,16 +6,19 @@ gitに拡張コマンドを追加する
 
 ### MAC
 
+download source
 ```
 git clone https://github.com/adebadayo/git-subcmd.git
 ```
 
+change permission
 ```
 chmod 777 cmd/*
 ```
 
+deploy 
 ```
-sudo cp cmd/* /usr/local/bin
+cp cmd/* /usr/local/bin
 ```
 
 ## command
