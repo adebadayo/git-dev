@@ -1,0 +1,5 @@
+set -e # エラーが起きたらそれ以降の処理を中断する
+git checkout $1
+git pull
+git checkout -b $2
+git push -u origin $2
