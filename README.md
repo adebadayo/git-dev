@@ -35,6 +35,7 @@ new branch:新たに作成するブランチ名
 
 ### git-bsync
 指定マージ元ブランチから複数のブランチに対してマージとプッシュを一緒に行う
+
  git-bsync [source branch] [target branchs]
 
 source branch :マージ元のブランチ名
