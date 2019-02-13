@@ -1,0 +1,20 @@
+if [ $# -eq 0 ]; then
+  echo "引数にマージ元、マージ先ブランチがありません。" 1>&2
+  exit 1
+fi
+
+if [ $# -le 1 ]; then
+  echo "引数にマージ先ブランチがありません。" 1>&2
+  echo "マージ先ブランチは1つ以上設定してください。" 1>&2
+  exit 1
+fi
+
+set -e # エラーが起きたらそれ以降の処理を中断する
+
+for i in "$@"
+do
+  git checkout $i
+  git pull
+  git pull origin $1
+  git push
+done

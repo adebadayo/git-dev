@@ -16,7 +16,7 @@ change permission
 chmod 777 cmd/*
 ```
 
-deploy 
+deploy
 ```
 cp cmd/* /usr/local/bin
 ```
@@ -32,3 +32,30 @@ source branch :ブランチ作成
 new branch:新たに作成するブランチ名
 
 例） git-dev develop feeature/add_migration
+
+### git-bsync
+指定マージ元ブランチから複数のブランチに対してマージとプッシュを一緒に行う
+ git-bsync [source branch] [target branchs]
+
+source branch :マージ元のブランチ名
+target branchs : マージ先のブランチ名（可変長）
+
+例） git-bsync feature/XXXX develop master
+feature/XXXXブランチからdeevlop,masterへマージとプッシュを行う
+
+実施コマンド
+
+```
+git checkout feature/XXXX
+git pull
+git pull origin feature/XXXX
+git push
+git checkout deevlop
+git pull
+git pull origin feature/XXXX
+git push
+git checkout master
+git pull
+git pull origin feature/XXXX
+git push
+```
