@@ -41,6 +41,7 @@ source branch :マージ元のブランチ名
 target branchs : マージ先のブランチ名（可変長）
 
 例） git-bsync feature/XXXX develop master
+
 feature/XXXXブランチからdeevlop,masterへマージとプッシュを行う
 
 実施コマンド
